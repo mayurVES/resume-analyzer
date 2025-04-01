@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v1
+        
+      - name: Install required packages
+        run: |
+          install.packages(c(
+            "shiny",
+            "shinydashboard",
+            "shinycssloaders",
+            "shinyjs",
+            "shinyWidgets",
+            "DT",
+            "pdftools",
+            "readtext",
+            "tidyverse",
+            "plotly",
+            "httr",
+            "jsonlite",
+            "glue",
+            "waiter",
+            "thematic",
+            "writexl"
+          ))
+          
+      - name: Build application
+        run: Rscript deploy.R
+        
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
