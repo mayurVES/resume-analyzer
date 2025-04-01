@@ -10,7 +10,13 @@ A Shiny web application for analyzing resumes and providing career recommendatio
 - Database export functionality
 - Modern and responsive UI
 
-## Setup Instructions
+## Live Demo
+
+Visit the live application at: [Resume Analyzer](https://yourusername.shinyapps.io/resume-analyzer/)
+
+## Local Development
+
+To run the application locally for development:
 
 1. Clone the repository:
 ```bash
@@ -45,6 +51,20 @@ install.packages(c(
 shiny::runApp("app")
 ```
 
+## Deployment
+
+This application is deployed using Shinyapps.io. To deploy your own instance:
+
+1. Sign up for a free account at [Shinyapps.io](https://www.shinyapps.io/)
+2. Install the rsconnect package:
+```R
+install.packages('rsconnect')
+```
+3. Deploy the application:
+```R
+rsconnect::deployApp("app")
+```
+
 ## Usage
 
 1. Upload your resume (PDF, DOCX, or TXT format)
@@ -53,15 +73,6 @@ shiny::runApp("app")
 4. Generate career recommendations
 5. View interactive visualizations
 6. Export data to Excel database
-
-## Deployment
-
-This application is deployed using GitHub Pages. To deploy your own instance:
-
-1. Fork this repository
-2. Enable GitHub Pages in your repository settings
-3. Set the source branch to `main` and folder to `/docs`
-4. Your application will be available at `https://yourusername.github.io/resume-analyzer`
 
 ## License
 

@@ -1,0 +1,80 @@
+Q1. Data Connection and Data Blending
+Connect to the following data sources:
+tableau_data/skills.xlsx (Primary data source)
+tableau_data/experience.xlsx (Secondary data source)
+Create a blended view showing:
+Skills distribution by industry (from experience data)
+Number of skills vs. years of experience
+Q2. Basic Reports and Grouping
+Create a report showing:
+Group skills by categories (Technical, Soft Skills, Domain Knowledge)
+Filter by experience level
+Parameters:
+Experience threshold
+Skill category
+Calculated fields:
+Years of experience
+Skill proficiency level
+Q3. Creating Visualizations
+Create three charts:
+Bar Chart: Top skills by industry
+X-axis: Industry (from company names)
+Y-axis: Count of skills
+Color: Skill categories
+Labels: Skill names
+Tooltips: Detailed skill descriptions
+Line Chart: Career progression
+X-axis: Years
+Y-axis: Number of achievements
+Color: Different individuals
+Labels: Achievement milestones
+Tooltips: Full achievement descriptions
+Dual Axis Chart: Skills vs. Projects
+Primary axis: Number of skills
+Secondary axis: Number of projects
+Color: Experience level
+Labels: Individual names
+Tooltips: Detailed metrics
+Q4. Calculations and Filters
+Create calculated fields:
+Experience level (Junior/Mid/Senior)
+Skill diversity score
+Career growth rate
+Project complexity index
+Apply filters:
+Quick filters: Experience level, Industry
+Dimension filters: Skill categories, Education level
+Top N filters: Most common skills, Most successful projects
+Q5. Dashboard Design
+Create an interactive dashboard with:
+Skills Overview section
+Skill distribution chart
+Top skills filter
+Industry selector
+Career Progress section
+Timeline of achievements
+Experience level indicator
+Project success metrics
+Recommendations section
+Skill gap analysis
+Career path suggestions
+Development opportunities
+Interactive elements:
+Global filters for experience level and industry
+Parameter controls for time period
+Drill-down capabilities for detailed views
+Highlight actions between charts
+To implement this in Tableau:
+First, run the data preparation script:
+Apply to prepare_tabl...
+Open Tableau Desktop and connect to the prepared Excel files
+Create the following sheets:
+Skills Analysis
+Career Progression
+Project Success
+Recommendations
+Create a dashboard combining all sheets with:
+Consistent color scheme
+Clear titles and labels
+Interactive filters
+Responsive layout
